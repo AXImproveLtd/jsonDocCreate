@@ -1,11 +1,11 @@
-# nanoJSON
+# jsonDocCreate
 Fast and ultra compact C# class to create well-formed JSON documents in sequential, top-down manner.
 
 There are many cases which fall between simplest, few-element JSON output(possible using StringBuilder or String.Format) and complex ones, where proper serializer is the right choice.
 
-nanoJSON has been created to cater for such mid-level cases. It is 10 times quicker than serializers because it uses StringBuilder to instantly append content. The speed comes at a price - document needs to be built top-to-bottom.
+jsonDocCreate has been created to cater for such mid-level cases. It is 10 times quicker than serializers because it uses StringBuilder to instantly append content. The speed comes at a price - document needs to be built top-to-bottom.
 
-## nanoJSON requires building the JSON document SEQUENTIALLY.
+## jsonDocCreate requires building the JSON document SEQUENTIALLY.
 
 Code below builds sample JSON from [Wikipedia](https://en.wikipedia.org/wiki/JSON)
 
