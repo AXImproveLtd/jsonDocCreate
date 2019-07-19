@@ -10,6 +10,7 @@ jsonDocCreate has been created to cater for such mid-level cases. It is 10 times
 Code below builds sample JSON from [Wikipedia](https://en.wikipedia.org/wiki/JSON)
 
 ```c#
+   {
     var doc = JSONElement.JSONDocument.newDoc(true);
 
     using (var root = doc.addObject())
@@ -36,8 +37,9 @@ Code below builds sample JSON from [Wikipedia](https://en.wikipedia.org/wiki/JSO
         }        
     }
     string output = doc.getOutput();
+  }
   ```
 
 
 Internal controls prevent out-of-order additions, ensuring that document is valid.
-Serialized content can be retrieved only after all documemnt's backets have been closed (e.g. objects and arrays deallocated in the proper sequence)
+Serialized content can be retrieved only after all document's backets have been closed (e.g. objects and arrays deallocated in the proper sequence)
